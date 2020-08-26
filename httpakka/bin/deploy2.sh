@@ -1,3 +1,4 @@
+set -ex
 project=my-chart
 helm install $project ops/helm --values ops/helm/values.yaml
 sleep 30
