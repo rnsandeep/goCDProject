@@ -16,7 +16,7 @@ object httpakka {
     path("greet"/Segment) {
       name =>
         get {
-          val greeting = "Hello: " + name
+          val greeting = "Hello Hai: " + name
           complete {
             greeting
           }
