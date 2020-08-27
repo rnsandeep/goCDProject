@@ -10,7 +10,7 @@ class Test1 extends WordSpec with Matchers with ScalatestRouteTest {
     "return greeting the name supplied" in {
       Get("/greet/Sandeep") ~> route ~> check {
         status shouldBe StatusCodes.OK
-        entityAs[String] shouldBe "Hello: Sandeep"
+        entityAs[String] shouldBe "Hello Hai: Sandeep"
       }
     }
     "return ok status " in {
