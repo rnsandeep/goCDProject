@@ -1,6 +1,6 @@
 set -ex
 project=my-chart
-helm install --wait --set version=$GO_PIPELINE_LABEL $project ops/helm --timeout 300s --values ops/helm/values.yaml	helm install --set version=$GO_PIPELINE_LABEL $project ops/helm  --values ops/helm/values.yaml
+helm install --wait --set version=$GO_PIPELINE_LABEL $project ops/helm --timeout 300s --values ops/helm/values.yaml
 for deployment in $(kubectl get deployments --namespace "$namespace" --output jsonpath='{.items[*].metadata.name}'); 	
 do	
             kubectl rollout status "deployment/$deployment" --namespace "default"	
