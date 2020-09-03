@@ -1,7 +1,6 @@
 //import sbt.Keys._
 import sbt._
 
-import Dependencies._
 
 val buildVersion = sys.env.getOrElse("GO_PIPELINE_LABEL", "0.1.0-SNAPSHOT")
 
@@ -19,7 +18,7 @@ lazy val akkaDependencies = Seq(
 lazy val root = (project in file("."))
   .settings(
     name := "httpakka",
-    libraryDependencies ++= rootDependencies ++ akkaDependencies,
+    libraryDependencies ++= akkaDependencies,
     resolvers ++= Seq(
       Resolver.mavenLocal
     )
