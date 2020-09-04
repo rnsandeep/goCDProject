@@ -1,5 +1,5 @@
 FROM java:8-jdk-alpine
-COPY ./httpakka-assembly-1.0.jar /usr/app/
+COPY ./assembly_latest.jar /usr/app/
 WORKDIR /usr/app
 EXPOSE 8080
-CMD ["java", "-jar", "httpakka-assembly-1.0.jar"]
+CMD ["java", "-jar", "assembly_latest.jar"]
