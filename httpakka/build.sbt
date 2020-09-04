@@ -1,8 +1,7 @@
 //import sbt.Keys._
 import sbt._
 
-
-val buildVersion = sys.env.getOrElse("GO_PIPELINE_LABEL", "0.1.0-SNAPSHOT")
+val buildVersion = sys.env.getOrElse("GO_PIPELINE_LABEL", "default")
 
 ThisBuild / scalaVersion     := "2.11.5"
 ThisBuild / version          := buildVersion
