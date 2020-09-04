@@ -7,7 +7,7 @@ class Test1 extends WordSpec with Matchers with ScalatestRouteTest {
   import httpakka.route
 
   "Task1" should {
-    "return greeting the name supplied" in {
+    "return greeting the name with Hello Hai: supplied" in {
       Get("/greet/Sandeep") ~> route ~> check {
         status shouldBe StatusCodes.OK
         entityAs[String] shouldBe "Hello Hai: Sandeep"
